@@ -132,14 +132,14 @@ func main() {
 	}
 
 	// Поиск данных в xml
-	flag := false
+	flag1 := false
 	for _, valNode := range valCourse.Valute {
 		if valNode.CharCode == *code {
 			fmt.Printf("%s (%s): %s", valNode.CharCode, valNode.Name, valNode.Value)
-			flag = true
+			flag1 = true
 		}
 	}
-	if !flag {
+	if !flag1 {
 		fmt.Printf("Введённый вами код: %s - не найден", *code)
 	}
 }
